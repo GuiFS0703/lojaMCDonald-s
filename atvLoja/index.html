@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS: -->
+    <link rel="stylesheet" href="style.css" />
+    <!--FONTE: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!--ICO: -->
+    <link
+      rel="shortcut icon"
+      href="images/McDonaldsICO.ico"
+      type="image/x-icon"
+    />
+    <title>McDonald's Shop</title>
+  </head>
+  <body>
+    <header>
+      <img src="images/SimpleMc.png" alt="Logo minimalista McDonald's" />
+      <div class="butao" onclick="modoClaro()">
+        <div class="bolinha-butao"></div>
+      </div>
+    </header>
+    <main class="organizar-sessoes">
+      <section class="produtos">
+        <div class="tipos-produtos">
+          <p id="menu" onclick="categoria='todos'; console.log(categoria)">
+            Todos
+          </p>
+          <p id="menu" onclick="categoria='bebidas';  console.log(categoria)">
+            Bebidas
+          </p>
+          <p
+            id="menu"
+            onclick="categoria='hamburgueres';  console.log(categoria)"
+          >
+            Hambúrgueres
+          </p>
+          <p id="menu" onclick="categoria='doces';  console.log(categoria)">
+            Doces
+          </p>
+        </div>
+        <div class="lista-produtos"></div>
+      </section>
+      <section class="caixa-pagamento">
+        <div class="listar-compras">
+          <div class="cabecalho-compra">
+            <h3 id="cabecalho-nome">Nome</h3>
+            <h3 id="cabecalho-unitario">Valor Unitário</h3>
+            <h3 id="cabecalho-qtd">Quantidade</h3>
+          </div>
+          <div class="produtos-compra">
+           
+            </div>
+          </div>
+        </div>
+
+        <div class="vl-total">
+          <p>Valor Total:</p>
+          <input type="number" id="total-produtos" readonly />
+        </div>
+
+        <div class="btns-compra">
+          <button id="cancelar" onclick="cancelarCompra()">Cancelar</button>
+          <button id="finalizar" onclick="confirmarCompra()">Finalizar</button>
+        </div>
+      </section>
+    </main>
+    <div class="compra-finalizada"><h2>COMPRA FINALIZADA!!!!</h2> <img src="images/duck.gif" alt="Gif de sucesso!">
+    <button onclick="location.reload();">Reiniciar</button></div>
+    <script src="script.js"></script>
+  </body>
+</html>
